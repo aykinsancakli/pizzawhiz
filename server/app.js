@@ -2,6 +2,8 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 
+const menuRouter = require("./routes/menuRoutes");
+
 const app = express();
 
 // Middlewares
@@ -19,8 +21,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Routes
-app.get("/api", (req, res) => {
-  res.status(200).json({ fruits: ["apple", "banana", "pineapple"] });
-});
+app.use("/api/menu", menuRouter);
 
 module.exports = app;
