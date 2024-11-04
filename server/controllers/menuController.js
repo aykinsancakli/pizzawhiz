@@ -1,6 +1,6 @@
 const Pizza = require("../models/Pizza");
 
-exports.getPizzas = async (req, res) => {
+exports.getMenu = async (req, res) => {
   try {
     const data = await Pizza.find();
     res.status(200).json(data);
