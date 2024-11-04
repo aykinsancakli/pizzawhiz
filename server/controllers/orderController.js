@@ -56,3 +56,28 @@ exports.createOrder = async (req, res) => {
     res.status(500).json({ status: "error", message: "Internal server error" });
   }
 };
+
+exports.getOrder = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    // Find the order in db
+    const order = await Order.findOne({ id });
+
+    // Check if the order exists
+    if (!order) {
+      return res
+        .status(404)
+        .json({ status: "error", message: "Order not found" });
+    }
+
+    // Send success message with the found order
+    res.status(200).json({
+      status: "success",
+      data: order,
+    });
+  } catch (error) {
+    console.error("Error fetching order by ID:", error);
+    res.status(500).json({ status: "error", message: "Internal server error" });
+  }
+};
