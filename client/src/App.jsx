@@ -1,29 +1,22 @@
-import { useEffect, useState } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import AppLayout from './ui/AppLayout';
+import Home from './ui/Home';
 
-const API_URL = import.meta.env.VITE_SERVER_DEVELOPMENT_URL;
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  const [menu, setMenu] = useState([]);
-
-  useEffect(function () {
-    async function fetchFruits() {
-      const res = await fetch(`${API_URL}/menu`);
-      const data = await res.json();
-      console.log(data);
-      setMenu(data);
-    }
-    fetchFruits();
-  }, []);
-
-  return (
-    <div className='mx-auto w-96 bg-slate-200 text-xl text-red-500'>
-      {menu.map((item) => (
-        <p key={item.id}>
-          {item.name}, {item.id}
-        </p>
-      ))}
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
