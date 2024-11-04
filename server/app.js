@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 
 const menuRouter = require("./routes/menuRoutes");
+const orderRouter = require("./routes/orderRoutes");
 
 const app = express();
 
@@ -22,5 +23,6 @@ app.use(cors(corsOptions));
 
 // Routes
 app.use("/api/menu", menuRouter);
+app.use("/api/order", orderRouter);
 
 module.exports = app;

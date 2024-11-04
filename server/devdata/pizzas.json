@@ -1,0 +1,184 @@
+[
+  {
+    "id": 1,
+    "name": "Margherita",
+    "unitPrice": 12,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730717890/pizza-1_tljdkg.jpg",
+    "ingredients": ["tomato", "mozzarella", "basil"],
+    "soldOut": false
+  },
+  {
+    "id": 2,
+    "name": "Capricciosa",
+    "unitPrice": 14,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730721299/pizza-2_utmr0h.jpg",
+    "ingredients": ["tomato", "mozzarella", "ham", "mushrooms", "artichoke"],
+    "soldOut": true
+  },
+  {
+    "id": 3,
+    "name": "Romana",
+    "unitPrice": 15,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730721623/pizza-3_mezyig.jpg",
+    "ingredients": ["tomato", "mozzarella", "prosciutto"],
+    "soldOut": false
+  },
+  {
+    "id": 4,
+    "name": "Prosciutto e Rucola",
+    "unitPrice": 16,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730721720/pizza-4_m7zv1i.webp",
+    "ingredients": ["tomato", "mozzarella", "prosciutto", "arugula"],
+    "soldOut": false
+  },
+  {
+    "id": 5,
+    "name": "Diavola",
+    "unitPrice": 16,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730721770/pizza-5_rr3tyl.jpg",
+    "ingredients": ["tomato", "mozzarella", "spicy salami", "chili flakes"],
+    "soldOut": false
+  },
+  {
+    "id": 6,
+    "name": "Vegetale",
+    "unitPrice": 13,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730721844/pizza-6_fbu6dq.jpg",
+    "ingredients": [
+      "tomato",
+      "mozzarella",
+      "bell peppers",
+      "onions",
+      "mushrooms"
+    ],
+    "soldOut": false
+  },
+  {
+    "id": 7,
+    "name": "Napoli",
+    "unitPrice": 16,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730721906/pizza-7_ayke5l.jpg",
+    "ingredients": ["tomato", "mozzarella", "fresh tomato", "basil"],
+    "soldOut": false
+  },
+  {
+    "id": 8,
+    "name": "Siciliana",
+    "unitPrice": 16,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730721969/pizza-8_uvoycv.jpg",
+    "ingredients": ["tomato", "mozzarella", "anchovies", "olives", "capers"],
+    "soldOut": true
+  },
+  {
+    "id": 9,
+    "name": "Pepperoni",
+    "unitPrice": 14,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730722043/pizza-9_u9gvdb.jpg",
+    "ingredients": ["tomato", "mozzarella", "pepperoni"],
+    "soldOut": false
+  },
+  {
+    "id": 10,
+    "name": "Hawaiian",
+    "unitPrice": 15,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730722128/pizza-10_tyit4g.jpg",
+    "ingredients": ["tomato", "mozzarella", "pineapple", "ham"],
+    "soldOut": false
+  },
+  {
+    "id": 11,
+    "name": "Spinach and Mushroom",
+    "unitPrice": 15,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730722188/pizza-11_viedcn.jpg",
+    "ingredients": ["tomato", "mozzarella", "spinach", "mushrooms"],
+    "soldOut": false
+  },
+  {
+    "id": 12,
+    "name": "Mediterranean",
+    "unitPrice": 16,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730722317/pizza-12_czqh1m.jpg",
+    "ingredients": [
+      "tomato",
+      "mozzarella",
+      "sun-dried tomatoes",
+      "olives",
+      "artichoke"
+    ],
+    "soldOut": false
+  },
+  {
+    "id": 13,
+    "name": "Greek",
+    "unitPrice": 16,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730722393/pizza-13_qzqlvj.jpg",
+    "ingredients": [
+      "tomato",
+      "mozzarella",
+      "spinach",
+      "feta",
+      "olives",
+      "pepperoncini"
+    ],
+    "soldOut": true
+  },
+  {
+    "id": 14,
+    "name": "Abruzzese",
+    "unitPrice": 16,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730722453/pizza-14_et9zgf.jpg",
+    "ingredients": ["tomato", "mozzarella", "prosciutto", "arugula"],
+    "soldOut": false
+  },
+  {
+    "id": 15,
+    "name": "Pesto Chicken",
+    "unitPrice": 16,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730722509/pizza-15_dfbuk9.jpg",
+    "ingredients": [
+      "pesto",
+      "mozzarella",
+      "chicken",
+      "sun-dried tomatoes",
+      "spinach"
+    ],
+    "soldOut": false
+  },
+  {
+    "id": 16,
+    "name": "Eggplant Parmesan",
+    "unitPrice": 15,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730722565/pizza-16_nam0ay.jpg",
+    "ingredients": ["marinara", "mozzarella", "eggplant", "parmesan"],
+    "soldOut": false
+  },
+  {
+    "id": 17,
+    "name": "Roasted Veggie",
+    "unitPrice": 15,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730722643/pizza-17_kakapk.png",
+    "ingredients": [
+      "marinara",
+      "mozzarella",
+      "zucchini",
+      "eggplant",
+      "peppers",
+      "onions"
+    ],
+    "soldOut": false
+  },
+  {
+    "id": 18,
+    "name": "Tofu and Mushroom",
+    "unitPrice": 15,
+    "imageUrl": "https://res.cloudinary.com/dyvacbovr/image/upload/v1730722708/pizza-18_fecbzi.jpg",
+    "ingredients": [
+      "marinara",
+      "mozzarella",
+      "tofu",
+      "mushrooms",
+      "bell peppers"
+    ],
+    "soldOut": false
+  }
+]
