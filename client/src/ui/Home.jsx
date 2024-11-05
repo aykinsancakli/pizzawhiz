@@ -4,7 +4,7 @@ function Home() {
   return (
     <div className='px-4 my-10 text-center sm:my-16'>
       <h1 className='mb-8 text-xl font-semibold md:text-3xl'>
-        The Best Pizza 🍕
+        The best pizza.
         <br />
         <p className='mt-1 mb-1 text-orange-400'>
           <span className='text-orange-400'>Fresh.</span>{' '}
