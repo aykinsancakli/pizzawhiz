@@ -1,9 +1,18 @@
+import { Link } from 'react-router-dom';
+import SearchOrder from '../features/order/SearchOrder';
+import Username from '../features/user/Username';
+
 function Header() {
   return (
-    <div className='flex h-20 items-center justify-between bg-gray-700 px-5 py-3'>
-      <h1 className='text-2xl font-semibold text-slate-100'>PizzaWhiz</h1>
-      <span className='text-2xl text-slate-100'>Aykin</span>
-    </div>
+    <header className='flex items-center justify-between px-4 py-3 text-orange-100 uppercase bg-orange-400 border-b border-stone-200 sm:px-6'>
+      <Link to='/' className='tracking-widest'>
+        PizzaWhiz Co.
+      </Link>
+
+      <SearchOrder />
+
+      <Username />
+    </header>
   );
 }
 
