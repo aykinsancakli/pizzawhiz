@@ -1,5 +1,7 @@
 import { Form } from 'react-router-dom';
 import Button from '../../ui/Button';
+import { useSelector } from 'react-redux';
+import { getCart } from '../cart/cartSlice';
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
