@@ -14,7 +14,7 @@ function Home() {
         <p>
           <span className='text-orange-600'>From our</span>{' '}
           <span className='text-orange-500'>oven to</span>{' '}
-          <span className='text-orange-400'>your door</span>
+          <span className='text-orange-400'>your door.</span>
         </p>
       </h1>
 
