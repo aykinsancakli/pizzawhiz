@@ -14,8 +14,9 @@ exports.createOrder = async (req, res) => {
     // Generate custom order ID
     const orderId = generateOrderId();
 
-    // Calculate estimated delivery time (testing => 30 seconds from now)
-    const estimatedDelivery = new Date(Date.now() + 30 * 1000);
+    // Generate a random estimated delivery time
+    const randomDelay = Math.floor(Math.random() * (50 - 30 + 1) + 30); // Between 30 to 50 minutes
+    const estimatedDelivery = new Date(Date.now() + randomDelay * 60 * 1000); // Convert minutes to ms
 
     // Create a new order object
     const newOrder = new Order({
@@ -36,15 +37,14 @@ exports.createOrder = async (req, res) => {
       priorityPrice,
     });
 
-    // Save order to the db
+    // Save the order to the DB
     const savedOrder = await newOrder.save();
 
-    // Simulate status change to "delivered" after 30 seconds for testing
-    const randomDelay = 30 * 1000;
+    // Simulate status change to "delivered" after the estimated delivery time
     setTimeout(async () => {
       savedOrder.status = "delivered";
-      await savedOrder.save(); // Update status in db
-    }, randomDelay);
+      await savedOrder.save(); // Update status in DB
+    }, randomDelay * 60 * 1000);
 
     // Send success response
     res.status(201).json({
@@ -79,5 +79,42 @@ exports.getOrder = async (req, res) => {
   } catch (error) {
     console.error("Error fetching order by ID:", error);
     res.status(500).json({ status: "error", message: "Internal server error" });
+  }
+};
+
+exports.updateOrder = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { priority } = req.body; // This will always be true
+
+    // Find the order in the DB by ID
+    const order = await Order.findOne({ id });
+
+    if (!order) {
+      return res.status(404).json({
+        status: "error",
+        message: "Order not found",
+      });
+    }
+
+    const priorityPrice = order.orderPrice * 0.2;
+
+    // Update the order with priority information
+    order.priority = priority;
+    order.priorityPrice = priorityPrice;
+
+    // Save the updated order to the DB
+    const updatedOrder = await order.save();
+
+    res.status(200).json({
+      status: "success",
+      data: updatedOrder,
+    });
+  } catch (error) {
+    console.error("Error updating the order:", error);
+    res.status(500).json({
+      status: "error",
+      message: "Internal server error",
+    });
   }
 };
