@@ -29,12 +29,14 @@ function MenuItem({ pizza }) {
 
   return (
     <li className='flex gap-4 py-2'>
-      <img
-        onClick={() => setIsImgOpen(true)}
-        src={imageUrl}
-        alt={name}
-        className={`h-24 w-24 cursor-pointer ${soldOut ? 'opacity-70 grayscale' : ''}`}
-      />
+      <div className='overflow-hidden'>
+        <img
+          onClick={() => setIsImgOpen(true)}
+          src={imageUrl}
+          alt={name}
+          className={`h-24 w-24 cursor-zoom-in transition-all duration-200 hover:scale-110 ${soldOut ? 'opacity-70 grayscale' : ''}`}
+        />
+      </div>
 
       {/* IMAGE OVERLAY FOR EACH MENU ITEM */}
       {isImgOpen && (
