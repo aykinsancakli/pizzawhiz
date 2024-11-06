@@ -81,7 +81,7 @@ Make sure you have the following:
 
    ```bash
    git clone https://github.com/aykinsancakli/pizzawhiz.git
-   cd triptracks
+   cd pizzawhiz
    ```
 
 2. **Install dependencies**:
