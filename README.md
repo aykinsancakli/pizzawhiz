@@ -2,7 +2,7 @@
 
 ![PizzaWhiz Cover Image](./assets/cover.jpg)
 
-**A web-based pizza ordering system that allows users to view the menu, manage their cart, and place orders for delivery or pickup.**
+**A web-based pizza ordering system that allows users to view the menu, manage their cart, place orders, and track the status of their orders in real time.**
 
 ---
 
