@@ -29,12 +29,12 @@ function MenuItem({ pizza }) {
 
   return (
     <li className='flex gap-4 py-2'>
-      <div className='overflow-hidden'>
+      <div className='min-w-24 overflow-hidden'>
         <img
           onClick={() => setIsImgOpen(true)}
           src={imageUrl}
           alt={name}
-          className={`h-24 w-24 cursor-zoom-in transition-all duration-200 hover:scale-110 ${soldOut ? 'opacity-70 grayscale' : ''}`}
+          className={`block h-24 w-24 cursor-zoom-in transition-all duration-200 hover:scale-110 ${soldOut ? 'opacity-70 grayscale' : ''}`}
         />
       </div>
 
@@ -51,7 +51,10 @@ function MenuItem({ pizza }) {
             >
               &times;
             </span>
-            <img src={imageUrl} className='mx-auto h-screen py-8'></img>
+            <img
+              src={imageUrl}
+              className='mx-auto h-1/2 py-8 sm:h-screen'
+            ></img>
           </div>
         </div>
       )}
