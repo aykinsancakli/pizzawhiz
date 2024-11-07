@@ -41,22 +41,10 @@ exports.createOrder = async (req, res) => {
     const savedOrder = await newOrder.save();
 
     // Simulate status change to "delivered" after the estimated delivery time
-    // setTimeout(async () => {
-    //   savedOrder.status = "delivered";
-    //   await savedOrder.save(); // Update status in DB
-    // }, randomDelay * 60 * 1000);
-
-    setTimeout(() => {
+    setTimeout(async () => {
       savedOrder.status = "delivered";
-      savedOrder
-        .save()
-        .then(() =>
-          console.log("Order status successfully changed to delivered")
-        )
-        .catch((error) =>
-          console.error("Error saving delivered status:", error)
-        );
-    }, 5000); // Temporary delay for testing
+      await savedOrder.save(); // Update status in DB
+    }, randomDelay * 60 * 1000);
 
     // Send success response
     res.status(201).json({
